@@ -6,10 +6,10 @@
 
   color: rgba(255, 255, 255, 0.87);
   background: repeating-linear-gradient(
-    25deg,
+    60deg,
     #c73535,
-    #cb2323 15px,
-    #26b326 15px,
+    #cb2323 20px,
+    #26b326 20px,
     #4ced4c 60px
   );
 

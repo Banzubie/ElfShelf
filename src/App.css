@@ -8,4 +8,14 @@
 .App {
   background-color: aliceblue;
   color: black;
+  width: 1000px;
+  height: 1000px;
+}
+
+.navBar {
+  border: 3px solid blue;
+  border-radius: .5em;
+  background-color: red;
+  color: whitesmoke;
+  font-size: larger;
 }
