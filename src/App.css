@@ -6,16 +6,37 @@
 }
 
 .App {
+  border: 5px solid rgb(1, 1, 114);
+  border-radius: .5em;
   background-color: aliceblue;
   color: black;
   width: 1000px;
-  height: 1000px;
+}
+
+.Logo {
+  position: relative;
+  right: 100px;
+}
+
+.Info {
+  position: relative;
+  float: right;
+  top: 50px;
+  right: 75px;
 }
 
 .navBar {
-  border: 3px solid blue;
+  border: 5px solid rgb(1, 1, 114);
   border-radius: .5em;
-  background-color: red;
-  color: whitesmoke;
-  font-size: larger;
+  background-color: rgb(213, 1, 1);
+  font-size: xx-large;
+  margin: 10px;
+  top: 100px;
+  background: repeating-linear-gradient(
+  45deg,
+  rgb(213, 1, 1),
+  rgb(213, 1, 1) 100px,
+  #ffffff 100px,
+  #ffffff 200px
+);
 }
