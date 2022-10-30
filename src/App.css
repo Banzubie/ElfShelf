@@ -1,12 +1,11 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
 .App {
-  border: 5px solid rgb(1, 1, 114);
+  border: 5px solid rgb(0, 69, 152);
   border-radius: .5em;
   background-color: aliceblue;
   color: black;
@@ -15,20 +14,27 @@
 
 .Logo {
   position: relative;
-  right: 100px;
+  right: 25px;
+  top: 15px;
 }
 
 .Info {
   position: relative;
   float: right;
-  top: 50px;
-  right: 75px;
+  top: 15px;
+  right: 50px;
+  background-color: rgb(213, 1, 1);
+  border: 5px solid rgb(0, 69, 152);
+  border-radius: .5em;
+  padding: 2em;
+  font-size: large;
+  color: aliceblue;
+  font:bolder;
 }
 
 .navBar {
-  border: 5px solid rgb(1, 1, 114);
+  border: 5px solid rgb(0, 69, 152);
   border-radius: .5em;
-  background-color: rgb(213, 1, 1);
   font-size: xx-large;
   margin: 10px;
   top: 100px;

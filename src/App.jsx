@@ -15,15 +15,15 @@ Email info@elfshelfholidayshop.com</p>
       <div className='navBar'><p>Home | How It Works | Gifts | Request Information | Sign Up Today</p></div>
         <h2>Elf Shelf® Holiday Shop In-School Gift Shoppe Program</h2>
         <p>Elf Shelf® Holiday Shop is a temporary, in-school gift shop program designed for Elementary and Middle School PTA/PTO/Parent groups that want to bring a free, fun and educational service project to their school.</p>
-        <ul style={{float: 'left'}}>
-          <li>100% Consignment</li>
-          <li>Most Gifts $7 and Less</li>
-          <li>No Inventory Required</li>
-          <li>Free Gift Wrap Supplies</li>
-          <li>Free Promotional Kit</li>
-          <li>Price-Programmed Cash Register</li>
-          <li>Sign up Promotions</li>
-        </ul>
+        <div style={{float: 'left', marginLeft: '50px'}}>
+          <p>100% Consignment</p>
+          <p>Most Gifts $7 and Less</p>
+          <p>No Inventory Required</p>
+          <p>Free Gift Wrap Supplies</p>
+          <p>Free Promotional Kit</p>
+          <p>Price-Programmed Cash Register</p>
+          <p>Sign up Promotions</p>
+        </div>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/ETso1d7SqrU" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
       </div>
       <br />
