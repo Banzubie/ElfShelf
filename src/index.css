@@ -16,8 +16,7 @@ body {
   display: flex;
   place-items: center;
   min-width: 320px;
-  min-height: 100vh;
-  background: repeating-radial-gradient(rgb(255, 255, 255), rgba(46, 164, 28, 0.997));
+  background: repeating-radial-gradient(rgb(255, 97, 97), rgba(129, 0, 0, 0.997));
   z-index: 1;
 }
 
