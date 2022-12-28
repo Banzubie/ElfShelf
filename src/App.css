@@ -9,7 +9,7 @@
   border-radius: .5em;
   background-color: aliceblue;
   color: black;
-  width: 1000px;
+  width: 900px;
 }
 
 .Logo {
@@ -34,8 +34,6 @@ button {
   border: none;
   color: aliceblue;
   padding: 0px 10px;
-  text-align: center;
-  display: inline-block;
   font-weight: bold;
   font-size: x-large;
   text-shadow: 1px 0 black;
