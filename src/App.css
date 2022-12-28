@@ -29,6 +29,23 @@
   background: rgb(0, 69, 152);
 }
 
+button {
+  background-color: rgb(0, 69, 152);
+  border: none;
+  color: aliceblue;
+  padding: 0px 10px;
+  text-align: center;
+  display: inline-block;
+  font-weight: bold;
+  font-size: x-large;
+  text-shadow: 1px 0 black;
+}
+
+button:hover {
+  cursor: pointer;
+  text-shadow: -0.75px 0 rgb(255, 97, 97), 0 0.75px rgb(255, 97, 97), 0.75px 0 rgb(255, 97, 97), 0 -0.75px rgb(255, 97, 97);
+}
+
 table {
   width: 100%;
 }
