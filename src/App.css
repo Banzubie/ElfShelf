@@ -22,6 +22,7 @@
 .navBar {
   position: relative;
   border: 5px solid rgb(0, 69, 152);
+  font-weight: bold;
   font-size: x-large;
   top: -27px;
   color: aliceblue;
@@ -38,5 +39,5 @@ table {
   padding-bottom: 1rem;
   font-size: large;
   color: aliceblue;
-  font:bolder;
+  font-weight:bolder;
 }
