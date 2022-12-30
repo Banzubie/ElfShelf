@@ -8,6 +8,7 @@ function Gifts () {
 
 100% Gift Guarantee – If at any time a gift is damaged, simply contact us and a replacement will be shipped directly to the purchaser free of charge.  No questions asked!
       </p>
+      <img src='src/assets/ElfGifts.png' className='GiftsElfPic'></img>
     </div>
   )
 }
