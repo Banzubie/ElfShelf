@@ -55,6 +55,11 @@ table {
   font-weight:bolder;
 }
 
+.sup {
+  font-size: 65%;
+  vertical-align: super;
+}
+
 .GiftsElfPic {
   height: 250px;
   float: inline-start;
