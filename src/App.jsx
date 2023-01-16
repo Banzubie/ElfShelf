@@ -8,7 +8,7 @@ import './App.css'
 
 function App() {
   const [page, setPage] = useState('Home');
-  const [requested, setRequested] = useState(false);
+  const [requested, setRequested] = useState('form');
 
   const navClick = (e) => {
     e.preventDefault();

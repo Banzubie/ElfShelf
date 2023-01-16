@@ -5,19 +5,25 @@ function RequestInfo ({ requested, setRequested }) {
 
   const sumbitInfo = (e) => {
     e.preventDefault();
+    //setRequested('sending');
     var schoolInfo = {
-      school: e.target.school.value,
       firstName: e.target.firstName.value,
       lastName: e.target.lastName.value,
       email: e.target.email.value,
       phone: e.target.phone.value,
-      studentCount: e.target.studentCount.value
+      school: e.target.school.value,
+      city: e.target.city.value || 'N/A',
+      state: e.target.state.value || 'N/A',
+      zip: e.target.zip.value || 'N/A',
+      studentCount: e.target.studentCount.value,
+      runShop: e.target.runShop.value,
+      contact: e.target.contact.value,
+      comments: e.target.comments.value
     }
     console.log(schoolInfo)
-    //setRequested(true);
   }
 
-  if (!requested) {
+  if (requested === 'form') {
     return (
       <div>
         <form onSubmit={sumbitInfo}>
@@ -118,14 +124,31 @@ function RequestInfo ({ requested, setRequested }) {
           <input type='radio' id='contactText' name='contact' value='text'></input>
           <label for='contactText'>Text</label>
           <br/>
+          <label for='comments'>Additional questions/comments:</label>
+          <br/>
+          <textarea id='comments' name='comments'></textarea>
+          <br/>
           <input type='submit' value='Request Information'></input>
         </form>
+      </div>
+    )
+  } else if (requested === 'sent') {
+    return (
+      <div>
+        <p>Thank you for interest! A representative will contact you shortly!</p>
+      </div>
+    )
+  } else if (requested === 'sending') {
+    return (
+      <div>
+        <h3>Sending...</h3>
       </div>
     )
   } else {
     return (
       <div>
-        <p>Thank you for interest! A representatice will contact you shortly!</p>
+        <p>Oh no! Something has gone wrong!</p>
+        <p>Please refresh the page and try again.</p>
       </div>
     )
   }
