@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import express from 'express'
+import compression from 'compression'
 import { createServer as createViteServer } from 'vite'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
@@ -20,6 +21,8 @@ async function createServer() {
   // use vite's connect instance as middleware
   // if you use your own express router (express.Router()), you should use router.use
   app.use(vite.middlewares)
+  app.use(compression())
+  app.use(express.json())
 
   app.use('*', async (req, res, next) => {
     const url = req.originalUrl

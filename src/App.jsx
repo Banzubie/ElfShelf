@@ -7,8 +7,8 @@ import HowItWorks from './components/HowItWorks'
 import './App.css'
 
 function App() {
-
   const [page, setPage] = useState('Home');
+  const [requested, setRequested] = useState(false);
 
   const navClick = (e) => {
     e.preventDefault();
@@ -16,7 +16,6 @@ function App() {
   }
 
   return (
-
     <div className="App">
       <div className='logo'>
         <img src='src/assets/elfshelflogo.jpg' style={{height: '153px'}}/>
@@ -26,7 +25,7 @@ function App() {
         {page === 'Home' ? <Home /> : null}
         {page === 'How It Works' ? <HowItWorks /> : null}
         {page === 'Gifts' ? <Gifts /> : null}
-        {page === 'Request Information' ? <RequestInfo /> : null}
+        {page === 'Request Information' ? <RequestInfo requested={requested} setRequested={setRequested}/> : null}
         {page === 'Sign Up Today' ? <SignUp /> : null}
       <p className='Info'>For Questions and Information{<br/>}
       Call 1-877-384-9653{<br/>}
