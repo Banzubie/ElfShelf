@@ -6,21 +6,6 @@ function RequestInfo ({ requested, setRequested }) {
   const sumbitInfo = (e) => {
     e.preventDefault();
     setRequested('sending');
-    var schoolInfo = {
-      firstName: e.target.firstName.value,
-      lastName: e.target.lastName.value,
-      email: e.target.email.value,
-      phone: e.target.phone.value,
-      school: e.target.school.value,
-      city: e.target.city.value || 'N/A',
-      state: e.target.state.value || 'N/A',
-      zip: e.target.zip.value || 'N/A',
-      studentCount: e.target.studentCount.value,
-      runShop: e.target.runShop.value,
-      contact: e.target.contact.value || 'N/A',
-      comments: e.target.comments.value || 'N/A'
-    }
-    console.log(schoolInfo)
     axios.post('/requestInfo', {
       firstName: e.target.firstName.value,
       lastName: e.target.lastName.value,

@@ -26,9 +26,7 @@ async function createServer() {
 
   app.post('/requestInfo', (req, res) => {
     console.log(req.body)
-    //res.sendStatus(200);
-    res.status(200)
-    res.send(req.body)
+    res.sendStatus(200);
   })
 
   app.use('*', async (req, res, next) => {
