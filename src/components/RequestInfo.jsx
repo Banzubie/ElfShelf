@@ -5,7 +5,7 @@ function RequestInfo ({ requested, setRequested }) {
 
   const sumbitInfo = (e) => {
     e.preventDefault();
-    //setRequested('sending');
+    setRequested('sending');
     var schoolInfo = {
       firstName: e.target.firstName.value,
       lastName: e.target.lastName.value,
@@ -17,34 +17,55 @@ function RequestInfo ({ requested, setRequested }) {
       zip: e.target.zip.value || 'N/A',
       studentCount: e.target.studentCount.value,
       runShop: e.target.runShop.value,
-      contact: e.target.contact.value,
-      comments: e.target.comments.value
+      contact: e.target.contact.value || 'N/A',
+      comments: e.target.comments.value || 'N/A'
     }
     console.log(schoolInfo)
+    axios.post('/requestInfo', {
+      firstName: e.target.firstName.value,
+      lastName: e.target.lastName.value,
+      email: e.target.email.value,
+      phone: e.target.phone.value,
+      school: e.target.school.value,
+      city: e.target.city.value || 'N/A',
+      state: e.target.state.value || 'N/A',
+      zip: e.target.zip.value || 'N/A',
+      studentCount: e.target.studentCount.value,
+      runShop: e.target.runShop.value,
+      contact: e.target.contact.value || 'N/A',
+      comments: e.target.comments.value || 'N/A'
+    }).then(res => {
+      console.log(res.data)
+      setRequested('sent')
+    }).catch(err => {
+      console.log(err)
+      setRequested('fail')
+    })
   }
 
   if (requested === 'form') {
     return (
       <div>
         <form onSubmit={sumbitInfo}>
-          <label>First Name*: </label>
+          <label htmlFor='firstName'>First Name*: </label>
           <input type='text' id='firstName' required></input>
           <br/>
-          <label>Last Name*: </label>
+          <label htmlFor='lastName'>Last Name*: </label>
           <input type='text' id='lastName' required></input>
           <br/>
-          <label for='email'>Email*: </label>
+          <label htmlFor='email'>Email*: </label>
           <input type='email' id='email' name='email' required></input>
           <br/>
-          <label for='phone'>Phone*: </label>
+          <label htmlFor='phone'>Phone*: </label>
           <input type='tel' id='phone' name='phone' required></input>
           <br/>
-          <label for='school'>School Name*: </label>
+          <label htmlFor='school'>School Name*: </label>
           <input type='text' id='school' name='school'required></input>
           <br/>
-          <label for='city'>City: </label>
+          <label htmlFor='city'>City: </label>
           <input type='text' id='city' name='city'></input>
-          <label for="state"> State: </label>
+          <br/>
+          <label htmlFor="state"> State: </label>
           <select id="state" name="state" style={{width: '45px'}}>
             <option value="---">---</option>
             <option value="Alabama">AL</option>
@@ -104,27 +125,27 @@ function RequestInfo ({ requested, setRequested }) {
             <option value="Wyoming">WY</option>
           </select>
           <br/>
-          <label>Zip: </label>
+          <label htmlFor='zip'>Zip: </label>
           <input type='text' id='zip'></input>
           <br/>
-          <label>Number of students*: </label>
+          <label htmlFor='studentCount'>Number of students*: </label>
           <input type='number' id='studentCount' required></input>
           <br/>
           <label>Did you run a shop last year?*:</label>
           <input type='radio' id='runShopYes' name='runShop' value='yes' required></input>
-          <label for='runShopYes'>Yes</label>
+          <label htmlFor='runShopYes'>Yes</label>
           <input type='radio' id='runShopNo' name='runShop' value='no' required></input>
-          <label for='runShopNo'>No</label>
+          <label htmlFor='runShopNo'>No</label>
           <br/>
           <label>Preferred contact method:</label>
           <input type='radio' id='contactEmail' name='contact' value='email'></input>
-          <label for='contactEmail'>Email</label>
+          <label htmlFor='contactEmail'>Email</label>
           <input type='radio' id='contactPhone' name='contact' value='phone'></input>
-          <label for='contactPhone'>Phone</label>
+          <label htmlFor='contactPhone'>Phone</label>
           <input type='radio' id='contactText' name='contact' value='text'></input>
-          <label for='contactText'>Text</label>
+          <label htmlFor='contactText'>Text</label>
           <br/>
-          <label for='comments'>Additional questions/comments:</label>
+          <label htmlFor='comments'>Additional questions/comments:</label>
           <br/>
           <textarea id='comments' name='comments'></textarea>
           <br/>
