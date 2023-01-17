@@ -45,12 +45,12 @@ function RequestInfo ({ requested, setRequested }) {
           <input type='tel' id='phone' name='phone' required></input>
           <br/>
           <label htmlFor='school'>School Name*: </label>
-          <input type='text' id='school' name='school'required></input>
+          <input type='text' id='school' name='school' required></input>
           <br/>
           <label htmlFor='city'>City: </label>
-          <input type='text' id='city' name='city'></input>
+          <input type='text' id='city' name='city' required></input>
           <br/>
-          <label htmlFor="state"> State: </label>
+          <label htmlFor="state" required> State: </label>
           <select id="state" name="state" style={{width: '45px'}}>
             <option value="---">---</option>
             <option value="Alabama">AL</option>
@@ -111,12 +111,12 @@ function RequestInfo ({ requested, setRequested }) {
           </select>
           <br/>
           <label htmlFor='zip'>Zip: </label>
-          <input type='text' id='zip'></input>
+          <input type='text' id='zip' required></input>
           <br/>
           <label htmlFor='studentCount'>Number of students*: </label>
           <input type='number' id='studentCount' required></input>
           <br/>
-          <label>Did you run a shop last year?*:</label>
+          <label>Did you run a shop in the last 3 years?*:</label>
           <input type='radio' id='runShopYes' name='runShop' value='yes' required></input>
           <label htmlFor='runShopYes'>Yes</label>
           <input type='radio' id='runShopNo' name='runShop' value='no' required></input>
@@ -141,7 +141,8 @@ function RequestInfo ({ requested, setRequested }) {
   } else if (requested === 'sent') {
     return (
       <div>
-        <p>Thank you for interest! A representative will contact you shortly!</p>
+        <p>Thank you for your interest! </p>
+        <p>A representative will be in contact with you shortly!</p>
       </div>
     )
   } else if (requested === 'sending') {
