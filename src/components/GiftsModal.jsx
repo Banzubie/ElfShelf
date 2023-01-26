@@ -3,8 +3,11 @@ import { useState } from 'react'
 function GiftsModal ({ setShowModal }) {
 
   return (
-    <div className='giftModal'>
+    <div>
+      <div className='giftModalBackground'/>
+      <div className='giftModal'>
       <button onClick={()=>(setShowModal(false))}>Close</button>
+      </div>
     </div>
   )
 }
