@@ -233,7 +233,7 @@ function SignUp ({ requested, setRequested }) {
             <br/>
           </div>
           }
-          <label>A price-programmed cash register will be provided when requested.:</label>
+          <label>A price-programmed cash register will be provided when requested:</label>
           <br/>
           <input type='radio' id='registerYes' name='register' value='registeryes' required></input>
           <label htmlFor='registerYes'>Yes, send a register</label>
@@ -254,7 +254,7 @@ function SignUp ({ requested, setRequested }) {
           <input type='number' id='merchandise'></input>
           <span> in merchandise.*</span>
           <br/>
-          <span style={{fontSize: 'xx-small'}}>(*First time shops leave blank. Minimum sent is typically $2500 worth.)</span>
+          <span style={{fontSize: 'xx-small'}}>*First time shops leave blank. Minimum sent is typically $2500 worth.</span>
           <br/>
           <input type='submit' value='Sign up'></input>
         </form>

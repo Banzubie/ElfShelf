@@ -32,19 +32,19 @@ function RequestInfo ({ requested, setRequested }) {
     return (
       <div>
         <form onSubmit={sumbitInfo}>
-          <label htmlFor='firstName'>First Name*: </label>
+          <label htmlFor='firstName'>First Name: </label>
           <input type='text' id='firstName' required></input>
           <br/>
-          <label htmlFor='lastName'>Last Name*: </label>
+          <label htmlFor='lastName'>Last Name: </label>
           <input type='text' id='lastName' required></input>
           <br/>
-          <label htmlFor='email'>Email*: </label>
+          <label htmlFor='email'>Email: </label>
           <input type='email' id='email' name='email' required></input>
           <br/>
-          <label htmlFor='phone'>Phone*: </label>
+          <label htmlFor='phone'>Phone: </label>
           <input type='tel' id='phone' name='phone' required></input>
           <br/>
-          <label htmlFor='school'>School Name*: </label>
+          <label htmlFor='school'>School Name: </label>
           <input type='text' id='school' name='school' required></input>
           <br/>
           <label htmlFor='city'>City: </label>
@@ -113,10 +113,10 @@ function RequestInfo ({ requested, setRequested }) {
           <label htmlFor='zip'>Zip: </label>
           <input type='text' id='zip' required></input>
           <br/>
-          <label htmlFor='studentCount'>Number of students*: </label>
+          <label htmlFor='studentCount'>Number of students: </label>
           <input type='number' id='studentCount' required></input>
           <br/>
-          <label>Did you run a shop in the last 3 years?*:</label>
+          <label>Did you run a shop in the last 3 years?:</label>
           <input type='radio' id='runShopYes' name='runShop' value='yes' required></input>
           <label htmlFor='runShopYes'>Yes</label>
           <input type='radio' id='runShopNo' name='runShop' value='no' required></input>
