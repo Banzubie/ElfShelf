@@ -2,6 +2,8 @@ import { useState } from 'react'
 
 function SignUp ({ requested, setRequested }) {
 
+  const [runSchool, setRunSchool] = useState(false);
+
   const sumbitInfo = (e) => {
     e.preventDefault();
     console.log(e.target)
@@ -32,31 +34,31 @@ function SignUp ({ requested, setRequested }) {
     return (
       <div>
         <form onSubmit={sumbitInfo}>
-          <label htmlFor='school'>School Name*: </label>
+          <label htmlFor='school'>School Name: </label>
           <input type='text' id='school' name='school' required></input>
           <br/>
-          <label htmlFor='group'>Group Name*: </label>
+          <label htmlFor='group'>Group Name: </label>
           <input type='text' id='group' name='group' required></input>
           <br/>
-          <label htmlFor='chairperson'>Chairperson*: </label>
+          <label htmlFor='chairperson'>Chairperson: </label>
           <input type='text' id='chairperson' required></input>
           <br/>
-          <label htmlFor='phone'>Phone*: </label>
+          <label htmlFor='phone'>Phone: </label>
           <input type='tel' id='phone' name='phone' required></input>
           <br/>
-          <label htmlFor='email'>Email*: </label>
+          <label htmlFor='email'>Email: </label>
           <input type='email' id='email' name='email' required></input>
           <br/>
-          <label htmlFor='secondPhone'>Secondary Phone*: </label>
+          <label htmlFor='secondPhone'>Secondary Phone: </label>
           <input type='tel' id='secondPhone' name='secondPhone' required></input>
           <br/>
-          <label htmlFor='schoolphone'>School Phone*: </label>
+          <label htmlFor='schoolphone'>School Phone: </label>
           <input type='tel' id='schoolphone' name='schoolphone' required></input>
           <br/>
-          <label htmlFor='fax'>Fax Number*: </label>
+          <label htmlFor='fax'>Fax Number: </label>
           <input type='tel' id='fax' name='fax' required></input>
           <br/>
-          <label htmlFor='billing'>Billing Address*: </label>
+          <label htmlFor='billing'>Billing Address: </label>
           <input type='text' id='billing' required></input>
           <br/>
           <label htmlFor='billcity'>City: </label>
@@ -125,7 +127,7 @@ function SignUp ({ requested, setRequested }) {
           <label htmlFor='billzip'>Zip: </label>
           <input type='text' id='billzip' required></input>
           <br/>
-          <label htmlFor='shipping'>Shipping Address*: </label>
+          <label htmlFor='shipping'>Shipping Address: </label>
           <input type='text' id='shipping' required></input>
           <br/>
           <label htmlFor='shipcity'>City: </label>
@@ -194,34 +196,50 @@ function SignUp ({ requested, setRequested }) {
           <label htmlFor='shipzip'>Zip: </label>
           <input type='text' id='shipzip' required></input>
           <br/>
-          <label htmlFor='presidentName'>President's Name*: </label>
+          <label htmlFor='presidentName'>President's Name: </label>
           <input type='text' id='presidentName' required></input>
           <br/>
-          <label htmlFor='presidentphone'>President's Phone*: </label>
+          <label htmlFor='presidentphone'>President's Phone: </label>
           <input type='tel' id='presidentphone' name='presidentphone' required></input>
           <br/>
-          <label htmlFor='treasureNamer'>Treasurer Name*: </label>
+          <label htmlFor='treasureNamer'>Treasurer Name: </label>
           <input type='text' id='treasurerName' required></input>
           <br/>
-          <label htmlFor='treasurerPhone'>Treasurer Phone*: </label>
+          <label htmlFor='treasurerPhone'>Treasurer Phone: </label>
           <input type='tel' id='treasurerPhone' name='treasurerPhone' required></input>
           <br/>
-          <label htmlFor='studentCount'>Number of students*: </label>
-          <input type='number' id='studentCount' required></input>
-          <br/>
-          <label>Did you run a holidy shop last year?*:</label>
-          <input type='radio' id='runShopYes' name='runShop' value='yes' required></input>
+          <label>Did you run a holidy shop last year?:</label>
+          <input type='radio' id='runShopYes' name='runShop' value='yes' onClick={() => {setRunSchool(true)}} required></input>
           <label htmlFor='runShopYes'>Yes</label>
-          <input type='radio' id='runShopNo' name='runShop' value='no' required></input>
+          <input type='radio' id='runShopNo' name='runShop' value='no' onClick={() => {setRunSchool(false)}} required></input>
           <label htmlFor='runShopNo'>No</label>
           <br/>
-          <label>A price-programmed cash register will be provided when requested.*:</label>
+          {!runSchool ? null :
+          <div>
+            <label htmlFor='yesSchoolName'>With whom?: </label>
+            <input type='text' id='yesSchoolName' required></input>
+            <br/>
+            <label htmlFor='yesSchoolSales'>Sales: $</label>
+            <input type='number' id='yesSchoolSales' required></input>
+            <br/>
+            <label htmlFor='yesSchoolStartDate'>Start Date: </label>
+            <input type='date' id='yesSchoolStartDate' required></input>
+            <br/>
+            <label htmlFor='yesSchoolEndDate'>End Date: </label>
+            <input type='date' id='yesSchoolEndDate' required></input>
+            <br/>
+            <label htmlFor='yesSchoolStudentCount'>Number of students: </label>
+            <input type='number' id='yesSchoolStudentCount' required></input>
+            <br/>
+          </div>
+          }
+          <label>A price-programmed cash register will be provided when requested.:</label>
           <br/>
-          <input type='radio' id='runShopYes' name='runShop' value='yes' required></input>
-          <label htmlFor='runShopYes'>Yes, send a register</label>
+          <input type='radio' id='registerYes' name='register' value='registeryes' required></input>
+          <label htmlFor='registerYes'>Yes, send a register</label>
           <br/>
-          <input type='radio' id='runShopNo' name='runShop' value='no' required></input>
-          <label htmlFor='runShopNo'>No, we do not need a register</label>
+          <input type='radio' id='registerNo' name='register' value='no' required></input>
+          <label htmlFor='registerNo'>No, we do not need a register</label>
           <br/>
           <label>We want to earn</label>
           <input type='radio' id='earn0%' name='earn' value='0%'></input>
@@ -231,6 +249,12 @@ function SignUp ({ requested, setRequested }) {
           <input type='radio' id='earn20%' name='earn' value='20%'></input>
           <label htmlFor='earn20%'>20%</label>
           <span> profit on our sales</span>
+          <br/>
+          <label htmlFor='merchandise'>Please send us approximately $ </label>
+          <input type='number' id='merchandise'></input>
+          <span> in merchandise.*</span>
+          <br/>
+          <span style={{fontSize: 'xx-small'}}>(*First time shops leave blank. Minimum sent is typically $2500 worth.)</span>
           <br/>
           <input type='submit' value='Sign up'></input>
         </form>
