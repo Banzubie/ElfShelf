@@ -26,8 +26,11 @@ async function createServer() {
   app.use(vite.middlewares)
 
   app.post('/requestInfo', (req, res) => {
-    requestInfo(req.body);
-    res.sendStatus(200);
+    requestInfo(req.body).then(info => {
+      res.sendStatus(200);
+    }).catch(err => {
+      res.sendStatus(400)
+    });
   })
 
   app.use('*', async (req, res, next) => {

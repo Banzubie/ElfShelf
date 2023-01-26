@@ -143,6 +143,7 @@ function RequestInfo ({ requested, setRequested }) {
       <div>
         <p>Thank you for your interest! </p>
         <p>A representative will be in contact with you shortly!</p>
+        <img src='src/assets/ELF WITH GIFT Small.jpeg' className='WorksElfPic'></img>
       </div>
     )
   } else if (requested === 'sending') {

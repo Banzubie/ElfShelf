@@ -10,7 +10,7 @@ var transporter = nodemailer.createTransport({
     pass: process.env.EMAIL_PW
   }
 });
-const requestInfo = (info) => {
+const requestInfo = async (info) => {
   var mailOptions = {
     from: process.env.EMAIL_USER,
     to: info.email,
@@ -31,11 +31,13 @@ const requestInfo = (info) => {
       `
   };
 
-  transporter.sendMail(mailOptions, function(error, info){
+  return transporter.sendMail(mailOptions, function(error, info){
     if (error) {
       console.log(error);
+      return error;
     } else {
       console.log('Email sent: ' + info.response);
+      return info;
     }
   });
 }
