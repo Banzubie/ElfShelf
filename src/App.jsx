@@ -26,7 +26,7 @@ function App() {
         {page === 'How It Works' ? <HowItWorks /> : null}
         {page === 'Gifts' ? <Gifts /> : null}
         {page === 'Request Information' ? <RequestInfo requested={requested} setRequested={setRequested}/> : null}
-        {page === 'Sign Up Today' ? <SignUp /> : null}
+        {page === 'Sign Up Today' ? <SignUp requested={requested} setRequested={setRequested}/> : null}
       <p className='Info'>For Questions and Information{<br/>}
       Call 1-877-384-9653{<br/>}
       Email info@elfshelfholidayshop.com</p>

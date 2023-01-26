@@ -33,6 +33,14 @@ async function createServer() {
     });
   })
 
+  app.post('/signUp', (req, res) => {
+    requestSignUp(req.body).then(info => {
+      res.sendStatus(200);
+    }).catch(err => {
+      res.sendStatus(400)
+    });
+  })
+
   app.use('*', async (req, res, next) => {
     const url = req.originalUrl
 
