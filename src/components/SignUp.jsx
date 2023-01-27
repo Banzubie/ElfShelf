@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import axios from 'axios'
 
 function SignUp ({ requested, setRequested }) {
 
@@ -6,28 +7,42 @@ function SignUp ({ requested, setRequested }) {
 
   const sumbitInfo = (e) => {
     e.preventDefault();
-    console.log(e.target)
-    // setRequested('sending');
-    // axios.post('/signUp', {
-    //   firstName: e.target.firstName.value,
-    //   lastName: e.target.lastName.value,
-    //   email: e.target.email.value,
-    //   phone: e.target.phone.value,
-    //   school: e.target.school.value,
-    //   city: e.target.city.value || 'N/A',
-    //   state: e.target.state.value || 'N/A',
-    //   zip: e.target.zip.value || 'N/A',
-    //   studentCount: e.target.studentCount.value,
-    //   runShop: e.target.runShop.value,
-    //   contact: e.target.contact.value || 'N/A',
-    //   comments: e.target.comments.value || 'N/A'
-    // }).then(res => {
-    //   console.log(res.data)
-    //   setRequested('sent')
-    // }).catch(err => {
-    //   console.log(err)
-    //   setRequested('fail')
-    // })
+    setRequested('sending');
+    axios.post('/signUp', {
+      school: e.target.school.value,
+      group: e.target.group.value,
+      chairperson: e.target.chairperson.value,
+      phone: e.target.phone.value,
+      email: e.target.email.value,
+      secondPhone: e.target.secondPhone.value || 'N/A',
+      schoolphone: e.target.schoolphone.value,
+      fax: e.target.fax.value,
+      billing: e.target.billing.value,
+      billcity: e.target.billcity.value,
+      billstate: e.target.billstate.value,
+      shipping: e.target.shipping.value,
+      shipcity: e.target.shipcity.value,
+      shipstate: e.target.shipstate.value,
+      presidentName: e.target.presidentName.value,
+      presidentphone: e.target.presidentphone.value,
+      treasurerName: e.target.treasurerName.value,
+      treasurerPhone: e.target.treasurerPhone.value,
+      runShop: e.target.runShop.value,
+      yesSchoolName: e.target.runShop.value === 'yes' ? e.target.yesSchoolName.value : 'N/A',
+      yesSchoolSales: e.target.runShop.value === 'yes' ? e.target.yesSchoolSales.value : 'N/A',
+      yesSchoolStartDate: e.target.runShop.value === 'yes' ? e.target.yesSchoolStartDate.value : 'N/A',
+      yesSchoolEndDate: e.target.runShop.value === 'yes' ? e.target.yesSchoolEndDate.value : 'N/A',
+      yesSchoolStudentCount: e.target.runShop.value === 'yes' ? e.target.yesSchoolStudentCount.value : 'N/A',
+      register: e.target.register.value,
+      earn: e.target.earn.value,
+      merchandise: e.target.merchandise.value || 'N/A'
+    }).then(res => {
+      console.log(res.data)
+      setRequested('sent')
+    }).catch(err => {
+      console.log(err)
+      setRequested('fail')
+    })
   }
 
   if (requested === 'form') {
@@ -50,7 +65,7 @@ function SignUp ({ requested, setRequested }) {
           <input type='email' id='email' name='email' required></input>
           <br/>
           <label htmlFor='secondPhone'>Secondary Phone: </label>
-          <input type='tel' id='secondPhone' name='secondPhone' required></input>
+          <input type='tel' id='secondPhone' name='secondPhone' ></input>
           <br/>
           <label htmlFor='schoolphone'>School Phone: </label>
           <input type='tel' id='schoolphone' name='schoolphone' required></input>
@@ -202,7 +217,7 @@ function SignUp ({ requested, setRequested }) {
           <label htmlFor='presidentphone'>President's Phone: </label>
           <input type='tel' id='presidentphone' name='presidentphone' required></input>
           <br/>
-          <label htmlFor='treasureNamer'>Treasurer Name: </label>
+          <label htmlFor='treasurerName'>Treasurer Name: </label>
           <input type='text' id='treasurerName' required></input>
           <br/>
           <label htmlFor='treasurerPhone'>Treasurer Phone: </label>
@@ -235,7 +250,7 @@ function SignUp ({ requested, setRequested }) {
           }
           <label>A price-programmed cash register will be provided when requested:</label>
           <br/>
-          <input type='radio' id='registerYes' name='register' value='registeryes' required></input>
+          <input type='radio' id='registerYes' name='register' value='yes' required></input>
           <label htmlFor='registerYes'>Yes, send a register</label>
           <br/>
           <input type='radio' id='registerNo' name='register' value='no' required></input>

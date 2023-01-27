@@ -1,5 +1,6 @@
 import nodemailer from 'nodemailer'
 import * as dotenv from 'dotenv'
+import pdfFiller from 'pdffiller'
 
 dotenv.config()
 
@@ -42,7 +43,7 @@ const requestInfo = async (info) => {
   });
 }
 
-const requestSignUp = () => {
+const requestSignUp = async (info) => {
 
 }
 
