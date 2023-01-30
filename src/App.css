@@ -11,7 +11,7 @@
   border-radius: .5em;
   background-color: rgb(254, 254, 254);
   color: black;
-  width: 900px;
+  max-width: 53.5rem;
 }
 
 .logo {
@@ -28,7 +28,7 @@
   top: -7px;
 }
 
-button {
+button, input[type=submit] {
   background-color: rgb(0, 69, 152);
   border: none;
   color: aliceblue;
@@ -38,7 +38,7 @@ button {
   text-shadow: 1px 0 black;
 }
 
-button:hover {
+button:hover, input[type=submit]:hover {
   cursor: pointer;
   text-shadow: -0.75px 0 rgb(255, 97, 97), 0 0.75px rgb(255, 97, 97), 0.75px 0 rgb(255, 97, 97), 0 -0.75px rgb(255, 97, 97);
 }
@@ -46,6 +46,7 @@ button:hover {
 table {
   width: 100%;
 }
+
 .Info {
   position: relative;
   top: 20px;
@@ -107,14 +108,15 @@ table {
   z-index: 1;
 }
 
-input[type=text], input[type=email], input[type=tel], input[type=number] {
+input[type=text], input[type=email], input[type=tel], input[type=number], select {
   background-color: rgba(229, 242, 254, 0.521);
   border: 1px solid rgb(0, 0, 0);
   border-radius: .5em;
   width: 400px;
   padding: 10px;
   margin: 5px;
-
+  display: flex;
+  justify-content: space-around;
 }
 
 input[type=number] {
@@ -126,11 +128,16 @@ input[type=number] {
   margin: 5px;
 }
 
+input[type=radio] {
+  position: relative;
+  float: left;
+}
+
 textarea {
   background-color: rgba(229, 242, 254, 0.521);
   border: 1px solid rgb(0, 0, 0);
   border-radius: .5em;
-  width: 500px;
+  width: 400px;
   height: 100px;
   padding: 10px;
   margin: 5px;
@@ -148,4 +155,24 @@ select {
 
 #zip, #billzip, #shipzip {
   width: 100px;
+}
+
+.requestForm {
+  display: flex;
+  justify-content: center;
+}
+
+label {
+  display: flex;
+}
+
+/* .howContainer, .giftContainer, .homeContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+.WorksElfPic {
+  max-width: min-content;
 }

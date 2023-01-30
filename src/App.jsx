@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import {Link} from "react-router-dom";
 import Home from './components/Home'
 import Gifts from './components/Gifts'
 import RequestInfo from './components/RequestInfo'
@@ -31,7 +32,12 @@ function App() {
       </div>
       <p className='Info'>For Questions and Information{<br/>}
       Call 1-877-384-9653{<br/>}
-      Email info@elfshelfholidayshop.com</p>
+      Email info@elfshelfholidayshop.com{<br/>}
+      <p style={{fontSize: '10px'}}>Website by Brian Vose <a href="https://github.com/Banzubie" target="_blank">
+          Github
+        </a> <a href="https://www.linkedin.com/in/brvose/" target="_blank">
+          LinkedIn
+        </a></p></p>
     </div>
   )
 }

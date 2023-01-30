@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 function HowItWorks () {
   return (
-    <div>
+    <div className='howContainer'>
       <h3>
       Hosting The Elf Shelf<span className="sup">&reg;</span> Holiday Shop is fun!
       </h3>

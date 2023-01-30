@@ -41,7 +41,7 @@ function Gifts () {
     return () => clearInterval(interval)
   })
   return (
-    <div>
+    <div className='giftsContainer'>
       <div className='carouselBox'>
         <button className='carouselPrev' onClick={prevPict}>{'<'}</button>
         <div className='carousel'>

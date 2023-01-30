@@ -30,26 +30,20 @@ function RequestInfo ({ requested, setRequested }) {
 
   if (requested === 'form') {
     return (
-      <div>
+      <div className='requestForm'>
         <form onSubmit={sumbitInfo}>
           <label htmlFor='firstName'>First Name: </label>
           <input type='text' id='firstName' required></input>
-          <br/>
           <label htmlFor='lastName'>Last Name: </label>
           <input type='text' id='lastName' required></input>
-          <br/>
           <label htmlFor='email'>Email: </label>
           <input type='email' id='email' name='email' required></input>
-          <br/>
           <label htmlFor='phone'>Phone: </label>
           <input type='tel' id='phone' name='phone' required></input>
-          <br/>
           <label htmlFor='school'>School Name: </label>
           <input type='text' id='school' name='school' required></input>
-          <br/>
           <label htmlFor='city'>City: </label>
           <input type='text' id='city' name='city' required></input>
-          <br/>
           <label htmlFor="state" required> State: </label>
           <select id="state" name="state">
             <option value="---">---</option>
@@ -111,16 +105,13 @@ function RequestInfo ({ requested, setRequested }) {
           </select>
           <label htmlFor='zip'>  Zip: </label>
           <input type='text' id='zip' required></input>
-          <br/>
           <label htmlFor='studentCount'>Number of students: </label>
           <input type='number' id='studentCount' required></input>
-          <br/>
           <label>Did you run a shop in the last 3 years?:</label>
           <input type='radio' id='runShopYes' name='runShop' value='yes' required></input>
           <label htmlFor='runShopYes'>Yes</label>
           <input type='radio' id='runShopNo' name='runShop' value='no' required></input>
           <label htmlFor='runShopNo'>No</label>
-          <br/>
           <label>Preferred contact method:</label>
           <input type='radio' id='contactEmail' name='contact' value='email'></input>
           <label htmlFor='contactEmail'>Email</label>
@@ -128,9 +119,7 @@ function RequestInfo ({ requested, setRequested }) {
           <label htmlFor='contactPhone'>Phone</label>
           <input type='radio' id='contactText' name='contact' value='text'></input>
           <label htmlFor='contactText'>Text</label>
-          <br/>
           <label htmlFor='comments'>Additional questions/comments:</label>
-          <br/>
           <textarea id='comments' name='comments'></textarea>
           <br/>
           <input type='submit' value='Request Information'></input>

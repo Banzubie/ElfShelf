@@ -15,7 +15,6 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
   background: repeating-radial-gradient(rgb(255, 97, 97), rgba(129, 0, 0, 0.997));
   z-index: 1;
 }
