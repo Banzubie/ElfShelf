@@ -51,7 +51,7 @@ function RequestInfo ({ requested, setRequested }) {
           <input type='text' id='city' name='city' required></input>
           <br/>
           <label htmlFor="state" required> State: </label>
-          <select id="state" name="state" style={{width: '45px'}}>
+          <select id="state" name="state">
             <option value="---">---</option>
             <option value="Alabama">AL</option>
             <option value="Alaska">AK</option>
@@ -109,8 +109,7 @@ function RequestInfo ({ requested, setRequested }) {
             <option value="Wisconsin">WI</option>
             <option value="Wyoming">WY</option>
           </select>
-          <br/>
-          <label htmlFor='zip'>Zip: </label>
+          <label htmlFor='zip'>  Zip: </label>
           <input type='text' id='zip' required></input>
           <br/>
           <label htmlFor='studentCount'>Number of students: </label>

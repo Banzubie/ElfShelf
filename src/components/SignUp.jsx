@@ -80,7 +80,7 @@ function SignUp ({ requested, setRequested }) {
           <input type='text' id='billcity' name='billcity' required></input>
           <br/>
           <label htmlFor="billstate"> State: </label>
-          <select id="billstate" name="billstate" style={{width: '45px'}} required>
+          <select id="billstate" name="billstate" required>
             <option value="---">---</option>
             <option value="Alabama">AL</option>
             <option value="Alaska">AK</option>
@@ -138,7 +138,6 @@ function SignUp ({ requested, setRequested }) {
             <option value="Wisconsin">WI</option>
             <option value="Wyoming">WY</option>
           </select>
-          <br/>
           <label htmlFor='billzip'>Zip: </label>
           <input type='text' id='billzip' required></input>
           <br/>
@@ -149,7 +148,7 @@ function SignUp ({ requested, setRequested }) {
           <input type='text' id='shipcity' name='shipcity' required></input>
           <br/>
           <label htmlFor="shipstate"> State: </label>
-          <select id="shipstate" name="shipstate" style={{width: '45px'}} required>
+          <select id="shipstate" name="shipstate" required>
             <option value="---">---</option>
             <option value="Alabama">AL</option>
             <option value="Alaska">AK</option>
@@ -207,8 +206,7 @@ function SignUp ({ requested, setRequested }) {
             <option value="Wisconsin">WI</option>
             <option value="Wyoming">WY</option>
           </select>
-          <br/>
-          <label htmlFor='shipzip'>Zip: </label>
+          <label htmlFor='shipzip'>  Zip: </label>
           <input type='text' id='shipzip' required></input>
           <br/>
           <label htmlFor='presidentName'>President's Name: </label>
