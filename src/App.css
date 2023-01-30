@@ -62,23 +62,47 @@ table {
 }
 
 .GiftsElfPic {
-  height: 250px;
-  float: right;
+  position: relative;
+  left: 25px;
+  top: 35px;
+  height: 300px;
 }
 
-.giftModal {
-  position: fixed;
-  z-index: 53;
-  top:25%;
-  left: 25%;
+.carouselBox {
+  position: relative;
+  height: 22rem;
+  left: 28%;
+  display: flex;
+  align-self: center;
+}
+.carousel {
+  background: #f1f1f1;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  width: 40%;
+  position: relative;
+  float: left;
 }
 
-.giftModalBackground {
-  position:fixed;
-  top: 0%;
-  left: 0%;
+.carouselImg {
+  height: 22rem;;
+  min-width: 100%;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.carouselNext {
+  position: relative;
+  float: left;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.582);
-  z-index: 52;
+}
+.carouselPrev {
+  position: relative;
+  float: left;
+  height: 100%;
+  z-index: 1;
 }
