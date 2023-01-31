@@ -16,13 +16,15 @@ function App() {
     setPage(e.target.innerText);
   }
 
+  console.log('Hello fellow developer! I\'d love to hear what you think of the site. Feel free to reach out to me at the links on the bottom of the page.')
+
   return (
     <div className="App">
       <div className='logo'>
         <img src='src/assets/elfshelflogo.jpg' />
         <img src='src/assets/ElfPointLeft.jpeg' style={{position: 'relative' , top: '30px',height: '153px'}}/>
       </div>
-      <div className='navBar'><p><button onClick={navClick}>Home</button> | <button onClick={navClick}>How It Works</button> | <button onClick={navClick}>Gifts</button> | <button onClick={navClick}>Request Information</button> | <button onClick={navClick}>Sign Up Today</button></p></div>
+      <div className='navBar'><p><button onClick={navClick}>Home</button><button onClick={navClick}>How It Works</button><button onClick={navClick}>Gifts</button><button onClick={navClick}>Request Information</button><button onClick={navClick}>Sign Up Today</button></p></div>
       <div style={{margin: '5%'}}>
         {page === 'Home' ? <Home /> : null}
         {page === 'How It Works' ? <HowItWorks /> : null}

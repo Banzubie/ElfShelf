@@ -203,7 +203,7 @@ function SignUp ({ requested, setRequested }) {
           <input type='text' id='treasurerName' required></input>
           <label htmlFor='treasurerPhone'>Treasurer Phone: </label>
           <input type='tel' id='treasurerPhone' name='treasurerPhone' required></input>
-          <label>Did you run a holidy shop last year?:</label>
+          <label>Did you run a holiday shop last year?:</label>
           <input type='radio' id='runShopYes' name='runShop' value='yes' onClick={() => {setRunSchool(true)}} required></input>
           <label htmlFor='runShopYes'>Yes</label>
           <input type='radio' id='runShopNo' name='runShop' value='no' onClick={() => {setRunSchool(false)}} required></input>
@@ -218,10 +218,10 @@ function SignUp ({ requested, setRequested }) {
 
             <label htmlFor='yesSchoolStartDate'>Start Date: </label>
             <input type='date' id='yesSchoolStartDate' required></input>
-
+            <br/>
             <label htmlFor='yesSchoolEndDate'>End Date: </label>
             <input type='date' id='yesSchoolEndDate' required></input>
-
+            <br/>
             <label htmlFor='yesSchoolStudentCount'>Number of students: </label>
             <input type='number' id='yesSchoolStudentCount' required></input>
 
