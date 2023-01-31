@@ -6,12 +6,13 @@
 
 .App {
   position: relative;
-  top: 25px;
+  top: 2em;
   border: 5px solid rgb(0, 69, 152);
   border-radius: .5em;
   background-color: rgb(254, 254, 254);
   color: black;
   max-width: 53.5em;
+  margin-bottom: 4em;
 }
 
 .logo {
