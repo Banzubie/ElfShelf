@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <div className='logo'>
-        <img src='src/assets/elfshelflogo.jpg' style={{height: '153px'}}/>
+        <img src='src/assets/elfshelflogo.jpg' />
         <img src='src/assets/ElfPointLeft.jpeg' style={{position: 'relative' , top: '30px',height: '153px'}}/>
       </div>
       <div className='navBar'><p><button onClick={navClick}>Home</button> | <button onClick={navClick}>How It Works</button> | <button onClick={navClick}>Gifts</button> | <button onClick={navClick}>Request Information</button> | <button onClick={navClick}>Sign Up Today</button></p></div>
@@ -33,11 +33,11 @@ function App() {
       <p className='Info'>For Questions and Information{<br/>}
       Call 1-877-384-9653{<br/>}
       Email info@elfshelfholidayshop.com{<br/>}
-      <p style={{fontSize: '10px'}}>Website by Brian Vose <a href="https://github.com/Banzubie" target="_blank">
+      <span style={{fontSize: '10px'}}>Website by Brian Vose <a href="https://github.com/Banzubie" target="_blank">
           Github
         </a> <a href="https://www.linkedin.com/in/brvose/" target="_blank">
           LinkedIn
-        </a></p></p>
+        </a></span></p>
     </div>
   )
 }
