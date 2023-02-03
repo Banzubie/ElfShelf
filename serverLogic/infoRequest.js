@@ -107,37 +107,41 @@ const requestSignUp = async (info) => {
   var mailOptions = {
     from: process.env.EMAIL_USER,
     to: info.email,
-    subject: `Sign up request from ${info.firstName} ${info.lastName} at ${info.school}`,
+    subject: `Sign up request from ${info.chairperson} at ${info.school}`,
     text: `
-      school: ${info.school},
-      group: ${info.group},
-      chairperson: ${info.chairperson},
-      phone: ${info.phone},
-      email: ${info.email},
-      secondPhone: ${info.secondPhone},
-      schoolphone: ${info.schoolphone},
-      fax: ${info.fax},
-      billing: ${info.billing},
-      billcity: ${info.billcity},
-      billstate: ${info.billstate},
-      billzip: ${info.billzip},
-      shipping: ${info.shipping},
-      shipcity: ${info.shipcity},
-      shipstate: ${info.shipstate},
-      shipzip: ${info.shipzip},
-      presidentName: ${info.presidentName},
-      presidentphone: ${info.presidentphone},
-      treasurerName: ${info.treasurerName},
-      treasurerPhone: ${info.treasurerPhone},
-      runShop: ${info.runShop},
-      yesSchoolName: ${info.yesSchoolName},
-      yesSchoolSales: ${info.yesSchoolSales},
-      yesSchoolStartDate: ${info.yesSchoolStartDate},
-      yesSchoolEndDate: ${info.yesSchoolEndDate},
-      yesSchoolStudentCount: ${info.yesSchoolStudentCount},
-      register: ${info.register},
-      earn: ${info.earn},
-      merchandise: ${info.merchandise}
+      School name: ${info.school},
+      Group name: ${info.group},
+      Chairperson: ${info.chairperson},
+      Phone: ${info.phone},
+      Email: ${info.email},
+      Secondary phone: ${info.secondPhone},
+      School phone: ${info.schoolphone},
+      Fax: ${info.fax},
+
+      Billing address:
+      ${info.billing}
+      ${info.billcity}, ${info.billstate} ${info.billzip},
+
+      Shipping Address:
+      ${info.shipping}
+      ${info.shipcity}, ${info.shipstate} ${info.shipzip},
+
+      President name: ${info.presidentName},
+      President phone: ${info.presidentphone},
+
+      Treasurer name: ${info.treasurerName},
+      Treasurer phone: ${info.treasurerPhone},
+
+      Have they run a shop before?: ${info.runShop},
+      Previous shop run with: ${info.yesSchoolName},
+      Previous shop sales: ${info.yesSchoolSales},
+      Previous shop start date: ${info.yesSchoolStartDate},
+      Previous shop end date: ${info.yesSchoolEndDate},
+      Previous shop student count: ${info.yesSchoolStudentCount},
+
+      Wants a register: ${info.register},
+      Percentage to earn: ${info.earn},
+      Send this amount of merchandise: ${info.merchandise}
       `,
       attachments: [{
           filename: `${info.school}SignUp.doc`,

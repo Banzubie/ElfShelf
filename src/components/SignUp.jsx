@@ -8,6 +8,37 @@ function SignUp ({ requested, setRequested }) {
   const sumbitInfo = (e) => {
     e.preventDefault();
     //setRequested('sending');
+    console.log({
+      school: e.target.school.value,
+      group: e.target.group.value,
+      chairperson: e.target.chairperson.value,
+      phone: e.target.phone.value,
+      email: e.target.email.value,
+      secondPhone: e.target.secondPhone.value || ' ',
+      schoolphone: e.target.schoolphone.value,
+      fax: e.target.fax.value,
+      billing: e.target.billing.value,
+      billcity: e.target.billcity.value,
+      billstate: e.target.billstate.value,
+      billzip: e.target.billzip.value,
+      shipping: e.target.shipping.value,
+      shipcity: e.target.shipcity.value,
+      shipstate: e.target.shipstate.value,
+      shipzip: e.target.shipzip.value,
+      presidentName: e.target.presidentName.value,
+      presidentphone: e.target.presidentphone.value,
+      treasurerName: e.target.treasurerName.value,
+      treasurerPhone: e.target.treasurerPhone.value,
+      runShop: e.target.runShop.value,
+      yesSchoolName: e.target.runShop.value === 'yes' ? e.target.yesSchoolName.value : ' ',
+      yesSchoolSales: e.target.runShop.value === 'yes' ? e.target.yesSchoolSales.value : ' ',
+      yesSchoolStartDate: e.target.runShop.value === 'yes' ? e.target.yesSchoolStartDate.value : ' ',
+      yesSchoolEndDate: e.target.runShop.value === 'yes' ? e.target.yesSchoolEndDate.value : ' ',
+      yesSchoolStudentCount: e.target.runShop.value === 'yes' ? e.target.yesSchoolStudentCount.value : ' ',
+      register: e.target.register.value,
+      earn: e.target.earn.value,
+      merchandise: e.target.merchandise.value || '2500'
+    })
     axios.post('/signUp', {
       school: e.target.school.value,
       group: e.target.group.value,
