@@ -34,13 +34,14 @@ async function createServer() {
   })
 
   app.post('/signUp', (req, res) => {
-    console.log(req.body)
-    res.sendStatus(200);
-    // requestSignUp(req.body).then(info => {
-    //   res.sendStatus(200);
-    // }).catch(err => {
-    //   res.sendStatus(400)
-    // });
+    // console.log(req.body)
+    // res.sendStatus(200);
+    requestSignUp(req.body).then(info => {
+      res.sendStatus(200);
+    }).catch(err => {
+      console.log(err)
+      res.sendStatus(400)
+    });
   })
 
   app.use('*', async (req, res, next) => {
