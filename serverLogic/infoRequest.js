@@ -23,17 +23,17 @@ const requestInfo = async (info) => {
     to: info.email,
     subject: `Information request from ${info.firstName} ${info.lastName} at ${info.school}`,
     text: `
-      First name: ${info.firstName},
-      Last name: ${info.lastName},
-      Email: ${info.email},
-      Phone: ${info.phone},
-      Preferred contact method: ${info.contact},
-      Has run a previous shop before: ${info.runShop},
-      School: ${info.school},
-      City: ${info.city},
-      State: ${info.state},
-      Zip: ${info.zip},
-      Approximate student count: ${info.studentCount},
+      First name: ${info.firstName}
+      Last name: ${info.lastName}
+      Email: ${info.email}
+      Phone: ${info.phone}
+      Preferred contact method: ${info.contact}
+      Has run a previous shop before: ${info.runShop}
+      School: ${info.school}
+      City: ${info.city}
+      State: ${info.state}
+      Zip: ${info.zip}
+      Approximate student count: ${info.studentCount}
       Comments: ${info.comments}
       `
   };
@@ -106,41 +106,41 @@ const requestSignUp = async (info) => {
 
   var mailOptions = {
     from: process.env.EMAIL_USER,
-    to: info.email,
+    to: process.env.EMAIL_SIGNUP,
     subject: `Sign up request from ${info.chairperson} at ${info.school}`,
     text: `
-      School name: ${info.school},
-      Group name: ${info.group},
-      Chairperson: ${info.chairperson},
-      Phone: ${info.phone},
-      Email: ${info.email},
-      Secondary phone: ${info.secondPhone},
-      School phone: ${info.schoolphone},
-      Fax: ${info.fax},
+      School name: ${info.school}
+      Group name: ${info.group}
+      Chairperson: ${info.chairperson}
+      Phone: ${info.phone}
+      Email: ${info.email}
+      Secondary phone: ${info.secondPhone}
+      School phone: ${info.schoolphone}
+      Fax: ${info.fax}
 
       Billing address:
       ${info.billing}
-      ${info.billcity}, ${info.billstate} ${info.billzip},
+      ${info.billcity}, ${info.billstate} ${info.billzip}
 
       Shipping Address:
       ${info.shipping}
-      ${info.shipcity}, ${info.shipstate} ${info.shipzip},
+      ${info.shipcity}, ${info.shipstate} ${info.shipzip}
 
-      President name: ${info.presidentName},
-      President phone: ${info.presidentphone},
+      President name: ${info.presidentName}
+      President phone: ${info.presidentphone}
 
-      Treasurer name: ${info.treasurerName},
-      Treasurer phone: ${info.treasurerPhone},
+      Treasurer name: ${info.treasurerName}
+      Treasurer phone: ${info.treasurerPhone}
 
-      Have they run a shop before?: ${info.runShop},
-      Previous shop run with: ${info.yesSchoolName},
-      Previous shop sales: ${info.yesSchoolSales},
-      Previous shop start date: ${info.yesSchoolStartDate},
-      Previous shop end date: ${info.yesSchoolEndDate},
-      Previous shop student count: ${info.yesSchoolStudentCount},
+      Have they run a shop before?: ${info.runShop}
+      Previous shop run with: ${info.yesSchoolName}
+      Previous shop sales: ${info.yesSchoolSales}
+      Previous shop start date: ${info.yesSchoolStartDate}
+      Previous shop end date: ${info.yesSchoolEndDate}
+      Previous shop student count: ${info.yesSchoolStudentCount}
 
-      Wants a register: ${info.register},
-      Percentage to earn: ${info.earn},
+      Wants a register: ${info.register}
+      Percentage to earn: ${info.earn}
       Send this amount of merchandise: ${info.merchandise}
       `,
       attachments: [{
