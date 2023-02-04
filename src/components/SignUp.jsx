@@ -7,38 +7,7 @@ function SignUp ({ requested, setRequested }) {
 
   const sumbitInfo = (e) => {
     e.preventDefault();
-    //setRequested('sending');
-    console.log({
-      school: e.target.school.value,
-      group: e.target.group.value,
-      chairperson: e.target.chairperson.value,
-      phone: e.target.phone.value,
-      email: e.target.email.value,
-      secondPhone: e.target.secondPhone.value || ' ',
-      schoolphone: e.target.schoolphone.value,
-      fax: e.target.fax.value,
-      billing: e.target.billing.value,
-      billcity: e.target.billcity.value,
-      billstate: e.target.billstate.value,
-      billzip: e.target.billzip.value,
-      shipping: e.target.shipping.value,
-      shipcity: e.target.shipcity.value,
-      shipstate: e.target.shipstate.value,
-      shipzip: e.target.shipzip.value,
-      presidentName: e.target.presidentName.value,
-      presidentphone: e.target.presidentphone.value,
-      treasurerName: e.target.treasurerName.value,
-      treasurerPhone: e.target.treasurerPhone.value,
-      runShop: e.target.runShop.value,
-      yesSchoolName: e.target.runShop.value === 'yes' ? e.target.yesSchoolName.value : ' ',
-      yesSchoolSales: e.target.runShop.value === 'yes' ? e.target.yesSchoolSales.value : ' ',
-      yesSchoolStartDate: e.target.runShop.value === 'yes' ? e.target.yesSchoolStartDate.value : ' ',
-      yesSchoolEndDate: e.target.runShop.value === 'yes' ? e.target.yesSchoolEndDate.value : ' ',
-      yesSchoolStudentCount: e.target.runShop.value === 'yes' ? e.target.yesSchoolStudentCount.value : ' ',
-      register: e.target.register.value,
-      earn: e.target.earn.value,
-      merchandise: e.target.merchandise.value || '2500'
-    })
+    setRequested('sending');
     axios.post('/signUp', {
       school: e.target.school.value,
       group: e.target.group.value,
@@ -74,7 +43,7 @@ function SignUp ({ requested, setRequested }) {
       setRequested('sent')
     }).catch(err => {
       console.log(err)
-      //setRequested('fail')
+      setRequested('fail')
     })
   }
 
@@ -236,6 +205,7 @@ function SignUp ({ requested, setRequested }) {
           <input type='text' id='treasurerName' required></input>
           <label htmlFor='treasurerPhone'>Treasurer Phone: </label>
           <input type='tel' id='treasurerPhone' name='treasurerPhone' required></input>
+          <br/>
           <label>Did you run a holiday shop last year?:</label>
           <input type='radio' id='runShopYes' name='runShop' value='yes' onClick={() => {setRunSchool(true)}} required></input>
           <label htmlFor='runShopYes'>Yes</label>
@@ -260,11 +230,13 @@ function SignUp ({ requested, setRequested }) {
 
           </div>
           }
+          <br/>
           <label>Price-programmed cash register:</label>
           <input type='radio' id='registerYes' name='register' value='yes' required></input>
           <label htmlFor='registerYes'>Yes, send a register</label>
           <input type='radio' id='registerNo' name='register' value='no' required></input>
           <label htmlFor='registerNo'>No, we do not need a register</label>
+          <br/>
           <label>We want to earn ___ profit on our sales.</label>
           <input type='radio' id='earn0%' name='earn' value='0%'></input>
           <label htmlFor='earn0%'>0%</label>
@@ -272,7 +244,8 @@ function SignUp ({ requested, setRequested }) {
           <label htmlFor='earn10%'>10%</label>
           <input type='radio' id='earn20%' name='earn' value='20%'></input>
           <label htmlFor='earn20%'>20%</label>
-          <label htmlFor='merchandise'>Send us approximately $__ in merchandise.*</label>
+          <br/>
+          <label htmlFor='merchandise'>Send approximately $__ in merchandise.*</label>
           <input type='number' id='merchandise'></input>
           <span style={{fontSize: 'xx-small'}}>*First time shops leave blank. Minimum sent is typically $2500 worth.</span>
           <br/>

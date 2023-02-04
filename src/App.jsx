@@ -32,9 +32,10 @@ function App() {
         {page === 'Request Information' ? <RequestInfo requested={requested} setRequested={setRequested}/> : null}
         {page === 'Sign Up Today' ? <SignUp requested={requested} setRequested={setRequested}/> : null}
       </div>
-      <p className='Info'>For Questions and Information{<br/>}
-      Call 1-877-384-9653{<br/>}
-      Email info@elfshelfholidayshop.com{<br/>}
+      <p className='Info'><span style={{fontSize: '10px', fontStyle: 'italic'}}>The Elf Shelf Holiday Shop is brought to you by Schoolpals, LLC</span>{<br/>}
+      For Questions and Information{<br/>}
+      Call <a href='tel:18773849653'>1-877-384-9653</a>{<br/>}
+      Email <a href='mailto:info@elfshelfholidayshop.com'>info@elfshelfholidayshop.com</a>{<br/>}
       <span style={{fontSize: '10px'}}>Website by Brian Vose <a href="https://github.com/Banzubie" target="_blank">
           Github
         </a> <a href="https://www.linkedin.com/in/brvose/" target="_blank">

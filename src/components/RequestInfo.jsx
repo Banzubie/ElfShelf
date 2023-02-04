@@ -107,11 +107,13 @@ function RequestInfo ({ requested, setRequested }) {
           <input type='text' id='zip' required></input>
           <label htmlFor='studentCount'>Number of students: </label>
           <input type='number' id='studentCount' required></input>
+          <br/>
           <label>Did you run a shop in the last 3 years?:</label>
           <input type='radio' id='runShopYes' name='runShop' value='yes' required></input>
           <label htmlFor='runShopYes'>Yes</label>
           <input type='radio' id='runShopNo' name='runShop' value='no' required></input>
           <label htmlFor='runShopNo'>No</label>
+          <br/>
           <label>Preferred contact method:</label>
           <input type='radio' id='contactEmail' name='contact' value='email'></input>
           <label htmlFor='contactEmail'>Email</label>
@@ -119,6 +121,7 @@ function RequestInfo ({ requested, setRequested }) {
           <label htmlFor='contactPhone'>Phone</label>
           <input type='radio' id='contactText' name='contact' value='text'></input>
           <label htmlFor='contactText'>Text</label>
+          <br/>
           <label htmlFor='comments'>Additional questions/comments:</label>
           <textarea id='comments' name='comments'></textarea>
           <br/>
