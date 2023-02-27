@@ -38,7 +38,7 @@ const requestInfo = async (info) => {
       `
   };
 
-  return transporter.sendMail(mailOptions, function(error, info){
+  return transporter.sendMail(mailOptions, function (error, info) {
     if (error) {
       console.log(error);
       return error;
@@ -55,13 +55,13 @@ const requestSignUp = async (info) => {
   const content = fs.readFileSync(
     path.resolve(__dirname, "SignUpTemp.docx"),
     "binary"
-);
+  );
 
   const zip = new PizZip(content);
 
   const doc = new Docxtemplater(zip, {
-      paragraphLoop: true,
-      linebreaks: true,
+    paragraphLoop: true,
+    linebreaks: true,
   });
 
   doc.render({
@@ -106,7 +106,7 @@ const requestSignUp = async (info) => {
 
   var mailOptions = {
     from: process.env.EMAIL_USER,
-    to: process.env.EMAIL_SIGNUP,
+    to: process.env.EMAIL_USER,
     subject: `Sign up request from ${info.chairperson} at ${info.school}`,
     text: `
       School name: ${info.school}
@@ -143,12 +143,12 @@ const requestSignUp = async (info) => {
       Percentage to earn: ${info.earn}
       Send this amount of merchandise: ${info.merchandise}
       `,
-      attachments: [{
-          filename: `${info.school}SignUp.doc`,
-          content: new Buffer(buf, 'utf-8')
-      }]
+    attachments: [{
+      filename: `${info.school}SignUp.doc`,
+      content: new Buffer(buf, 'utf-8')
+    }]
   };
-  return transporter.sendMail(mailOptions, function(error, info){
+  return transporter.sendMail(mailOptions, function (error, info) {
     if (error) {
       console.log(error);
       return error;
@@ -160,4 +160,4 @@ const requestSignUp = async (info) => {
 }
 
 
-export {requestInfo, requestSignUp}
+export { requestInfo, requestSignUp }
