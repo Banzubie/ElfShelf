@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-function Gifts () {
+function Gifts() {
   const [showModal, setShowModal] = useState(false);
   const [index, setIndex] = useState(0);
   const pictures = [
@@ -45,18 +45,18 @@ function Gifts () {
       <div className='carouselBox'>
         <button className='carouselPrev' onClick={prevPict}>{'<'}</button>
         <div className='carousel'>
-        {pictures.map((pict, idx) => {
-          return <img className='carouselImg' src={pict} style={{transform: `translate(-${index * 100}%)`}} key={idx}></img>
-        })}
+          {pictures.map((pict, idx) => {
+            return <img className='carouselImg' src={pict} style={{ transform: `translate(-${index * 100}%)` }} key={idx}></img>
+          })}
         </div>
         <button className='carouselNext' onClick={nextPict}>{'>'}</button>
       </div>
       <p>
-      The Elf Shelf<span className="sup">&reg;</span> Holiday Shop gifts are selected by a team of purchasers during a two-week trip to China every January. After a variety of gifts are selected, SchoolPals (the parent company of The Elf Shelf<span className="sup">&reg;</span> Holiday Shop) participates in a process to discuss which gifts should be chosen.  The selected gifts then go through an independent testing process. All of The Elf Shelf<span className="sup">&reg;</span> Holiday Shop gifts must pass quality control and the Federal CPSIA testing requirements to be included in our gift line. Test results are available upon request.
+        The Elf Shelf<span className="sup">&reg;</span> Holiday Shop gifts are selected by a team of purchasers during a two-week merchandising trip every January. After a variety of gifts are selected, SchoolPals (an authorized rep of The Elf Shelf<span className="sup">&reg;</span> Holiday Shop) participates in a process to discuss which gifts should be chosen.  The selected gifts then go through an independent testing process. All of The Elf Shelf<span className="sup">&reg;</span> Holiday Shop gifts must pass quality control and the Federal CPSIA testing requirements to be included in our gift line. Test results are available upon request.
 
-100% Gift Guarantee – If at any time a gift is damaged, simply contact us and a replacement will be shipped directly to the purchaser free of charge.  No questions asked!
+        100% Gift Guarantee – If at any time a gift is damaged, simply contact us and a replacement will be shipped directly to the purchaser free of charge.  No questions asked!
       </p>
-        <img src='src/assets/ElfGifts.png' className='GiftsElfPic'></img>
+      <img src='src/assets/ElfGifts.png' className='GiftsElfPic'></img>
     </div>
   )
 }
