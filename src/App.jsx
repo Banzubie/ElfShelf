@@ -16,8 +16,6 @@ function App() {
     setPage(e.target.innerText);
   }
 
-  console.log('Hello fellow developer! I\'d love to hear what you think of the site. Feel free to reach out to me at the links on the bottom of the page.')
-
   return (
     <div className="App">
       <div className='logo'>
