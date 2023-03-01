@@ -11,7 +11,14 @@ import { fileURLToPath } from 'url'
 dotenv.config()
 
 var transporter = nodemailer.createTransport({
-  service: 'aol',
+  service: "Outlook365",
+  host: 'smtp.office365.com',
+  port: '587',
+  secure: false,
+  tls: {
+    ciphers: 'SSLv3',
+    rejectUnauthorized: false
+  },
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PW
@@ -20,7 +27,7 @@ var transporter = nodemailer.createTransport({
 const requestInfo = async (info) => {
   var mailOptions = {
     from: process.env.EMAIL_USER,
-    to: info.email,
+    to: process.env.EMAIL_USER,
     subject: `Information request from ${info.firstName} ${info.lastName} at ${info.school}`,
     text: `
       First name: ${info.firstName}
