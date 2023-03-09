@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <div className='logo'>
-        <img src='src/assets/elfshelflogo.jpg' alt='The Elf Shelf logo' />
+        <img src='src/assets/elfshelflogo.jpg' alt='The Elf Shelf logo' style={{}} />
         <img src='src/assets/ElfPointLeft.jpeg' style={{ position: 'relative', top: '30px', height: '153px' }} alt='elf pointing with index finger to the logo' />
       </div>
       <div className='navBar'><p><button onClick={navClick}>Home</button><button onClick={navClick}>How It Works</button><button onClick={navClick}>Gifts</button><button onClick={navClick}>Request Information</button><button onClick={navClick}>Sign Up Today</button></p></div>
