@@ -22,6 +22,17 @@
   max-width: 53em;
 }
 
+.logoText {
+  position: absolute;
+  top: 12em;
+  left: 21.5em;
+  color: rgb(176, 0, 0);
+  font-weight: 900;
+  font-style: italic;
+  font-size: 12px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 .navBar {
   position: relative;
   font-weight: bold;
@@ -89,7 +100,6 @@ table {
 
 .carouselImg {
   height: 22rem;
-  ;
   min-width: 100%;
   width: 100%;
   display: flex;
